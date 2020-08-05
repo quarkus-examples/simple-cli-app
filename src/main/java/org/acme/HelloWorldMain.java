@@ -15,7 +15,7 @@ public class HelloWorldMain implements QuarkusApplication {
   @Override
   @ActivateRequestContext
   public int run(String... args) throws Exception {   
-    System.out.println(greeterService.greet(args.length > 0 ? args[0] : null));
+    System.out.println(greeterService.greet(args.length > 0 ? String.join(" ",args) : null));
     return 0;
   }
     
